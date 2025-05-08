@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".editnoteactivity">
+
+    <!-- Toolbar at the top -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarofeditnote"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:title="Edit Note"
+        app:titleTextColor="@android:color/white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="4dp" />
+
+    <!-- Title EditText -->
+    <EditText
+        android:id="@+id/edittitleofnote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarofeditnote"
+        android:hint="Enter your note title here"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:padding="12dp"
+        android:background="@android:color/transparent"
+        android:inputType="textCapSentences" />
+
+    <!-- Content EditText -->
+    <EditText
+        android:id="@+id/editcontentofnote"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/edittitleofnote"
+        android:layout_above="@id/update"
+        android:hint="Enter your note content here"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:background="#FAFAFA"
+        android:gravity="top|start"
+        android:padding="16dp"
+        android:inputType="textMultiLine"
+        android:overScrollMode="always"
+        android:scrollbars="vertical"
+        android:maxLines="10" />
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="24dp"
+        android:src="@drawable/baseline_save_as_24"
+        android:contentDescription="Save Note"
+        app:backgroundTint="#A1F4FB" />
+</RelativeLayout>
