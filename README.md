@@ -27,3 +27,11 @@ An Android note-taking application built using **Kotlin**, **Firebase Authentica
 
 ## 📂 Project Structure
 
+├── .idea/ # Android Studio config
+├── app/ # Main application source
+├── gradle/ # Gradle wrapper files
+├── build.gradle.kts # Root build config
+├── gradle.properties # Gradle properties
+├── settings.gradle.kts # Module settings
+├── gradlew.bat # Gradle wrapper (Windows)
+└── .gitignore # Git ignore rules
